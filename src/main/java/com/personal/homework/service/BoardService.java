@@ -1,7 +1,7 @@
 package com.personal.homework.service;
 
 
-import com.personal.homework.dto.BoardResponseDto;
+import com.personal.homework.dto.BoardDeleteDto;
 import com.personal.homework.entity.Board;
 import com.personal.homework.dto.BoardRequestDto;
 import com.personal.homework.repository.BoardRepository;
@@ -56,14 +56,14 @@ public class BoardService {
 
 
     @Transactional
-    public Board delete(Long id, BoardRequestDto requestDto) {
+    public String delete(Long id, BoardDeleteDto deleteDto) {
         Board board = boardRepository.findById(id).orElseThrow(
                 () -> new IllegalArgumentException("개시글이 존재하지 않습니다.")
         );
-        if (!board.getPassword().equals(requestDto.getPassword())){
+        if (!board.getPassword().equals(deleteDto.getPassword())){
             throw new IllegalArgumentException("패스워드가 맞지 않습니다.");
         }
         boardRepository.deleteById(id);
-        return board;
+        return deleteDto.getSuccess();
     }
 }
