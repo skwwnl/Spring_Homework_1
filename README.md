@@ -16,58 +16,58 @@ Spring 1주차 개인 과제
 
 ---
 
-![1112.drawio (1).png](./homework/1112.drawio_(1).png)
+![1112.drawio (1).png](./1112.drawio_(1).png)
 
 ## API 명세서
 
 ---
 
-| ------------ | ---------------------- | ------------------------------- | ------------------------------------------------- |
-|--------------|------------------------|---------------------------------|---------------------------------------------------|
-|              |                        |                                 | "createdAt": "2022-07-25T12:43:01.226062”,        |
-|              |                        |                                 | "modifiedAt": "2022-07-25T12:43:01.226062”,       |
-|              |                        |                                 | "id": 1,                                          |
-|              |                        |                                 | "title": "title",                                 |
-|              |                        |                                 | "name" : "name",                                  |
-|              |                        |                                 | "password" : "password",                          |
-|              |                        |                                 | "contents" : "contents"                           |
-|              |                        |                                 | },                                                |
-| POST         | /api/boards            | {                               | {                                                 |
-|              |                        | "title" : title",               | "createdAt": "2022-07-25T12:43:01.226062”,        |
-|              |                        | "name" : "name",                | "modifiedAt": "2022-07-25T12:43:01.226062”,       |
-|              |                        |                                 | "id": 1,                                          |
-|              |                        | "password" : "password",        | "title": "title",                                 |
-|              |                        | "contents" : "contents"         | "name" : "name",                                  |
-|              |                        | }                               | "password" : "password",                          |
-|              |                        |                                 | "contents" : "contents"                           |
-|              |                        |                                 | }                                                 |
-|              |                        |                                 | "id": 1,                                          |
-|              |                        |                                 | "title": "title",                                 |
-|              |                        |                                 | "name" : "name",                                  |
-|              |                        |                                 | "password" : "password",                          |
-|              |                        |                                 | "contents" : "contents"                           |
-|              |                        |                                 | }                                                 |
-| GET          | /api/boards/{id}       | -                               | {                                                 |
-|              |                        |                                 | "createdAt": "2022-07-25T12:43:01.226062”,        |
-|              |                        |                                 | "modifiedAt": "2022-07-25T12:43:01.226062”,       |
-|              |                        |                                 | "id": 2,                                          |
-|              |                        |                                 | "title": "title2",                                |
-|              |                        |                                 | "name" : "name2",                                 |
-|              |                        |                                 | "password" : "password2",                         |
-|              |                        |                                 | "contents" : "contents2"                          |
-|              |                        |                                 | }                                                 |
-| PUT          | /api/boards/{id}       | {                               | {                                                 |  |
-|              |                        | "title" : "title2",             | "createdAt": "2022-07-25T12:43:01.226062”,        |
-|              |                        | "name" : "name2",               | "modifiedAt": "2022-07-25T12:43:01.226062”,       |
-|              |                        | "password" : "password2",       | "id": 1,                                          |
-|              |                        | "contents" : "contents2"        | "title": "title2",                                |
-|              |                        | }                               | "name" : "name2",                                 |
-|              |                        |                                 | "password" : "password2",                         |
-|              |                        |                                 | "contents" : "contents2"                          |
-|              |                        |                                 | }                                                 |
-| DELETE       | /api/boards/{id}       | {                               |                                                   |
-|              |                        | "password" :"password"          | “삭제하였습니다”                                         |
-|              |                        | }                               |                                                   |
+|------------|----------------------|-------------------------------|-------------------------------------------------|
+| GET       | /api/All_boards     | -                            | {                                              |
+|           |                     |                              | "createdAt": "2022-07-25T12:43:01.226062”,     |
+|           |                     |                              | "modifiedAt": "2022-07-25T12:43:01.226062”,    |
+|           |                     |                              | "id": 1,                                       |
+|           |                     |                              | "title": "title",                              |
+|           |                     |                              | "name" : "name",                               |
+|           |                     |                              | "password" : "password",                       |
+|           |                     |                              | "contents" : "contents"                        |
+|           |                     |                              | },                                             |
+| POST      | /api/boards         | {                            | {                                              |
+|           |                     | "title" : title",            | "createdAt": "2022-07-25T12:43:01.226062”,     |
+|           |                     | "name" : "name",             | "modifiedAt": "2022-07-25T12:43:01.226062”,    |
+|           |                     |                              | "id": 1,                                       |
+|           |                     | "password" : "password",     | "title": "title",                              |
+|           |                     | "contents" : "contents"      | "name" : "name",                               |
+|           |                     | }                            | "password" : "password",                       |
+|           |                     |                              | "contents" : "contents"                        |
+|           |                     |                              | }                                              |
+|           |                     |                              | "id": 1,                                       |
+|           |                     |                              | "title": "title",                              |
+|           |                     |                              | "name" : "name",                               |
+|           |                     |                              | "password" : "password",                       |
+|           |                     |                              | "contents" : "contents"                        |
+|           |                     |                              | }                                              |
+| GET       | /api/boards/{id}    | -                            | {                                              |
+|           |                     |                              | "createdAt": "2022-07-25T12:43:01.226062”,     |
+|           |                     |                              | "modifiedAt": "2022-07-25T12:43:01.226062”,    |
+|           |                     |                              | "id": 2,                                       |
+|           |                     |                              | "title": "title2",                             |
+|           |                     |                              | "name" : "name2",                              |
+|           |                     |                              | "password" : "password2",                      |
+|           |                     |                              | "contents" : "contents2"                       |
+|           |                     |                              | }                                              |
+| PUT       | /api/boards/{id}    | {                            | {                                              | 
+|           |                     | "title" : "title2",          | "createdAt": "2022-07-25T12:43:01.226062”,     |
+|           |                     | "name" : "name2",            | "modifiedAt": "2022-07-25T12:43:01.226062”,    |
+|           |                     | "password" : "password2",    | "id": 1,                                       |
+|           |                     | "contents" : "contents2"     | "title": "title2",                             |
+|           |                     | }                            | "name" : "name2",                              |
+|           |                     |                              | "password" : "password2",                      |
+|           |                     |                              | "contents" : "contents2"                       |
+|           |                     |                              | }                                              |
+| DELETE    | /api/boards/{id}    | {                            |                                                |
+|           |                     | "password" :"password"       | “삭제하였습니다”                                 |
+|           |                     | }                            |                                                |
 
 ## 질문
 
