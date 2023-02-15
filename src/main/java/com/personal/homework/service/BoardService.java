@@ -36,10 +36,9 @@ public class BoardService {
 
     @Transactional
     public Board selectShow(Long id) {
-        return boardRepository.findById(id).get();
-//                orElseThrow(
-//                () -> new IllegalArgumentException("해당 번호의 게시글이 존재하지 않습니다.")
-//        );
+        return boardRepository.findById(id).orElseThrow(
+                () -> new IllegalArgumentException("해당 번호의 게시글이 존재하지 않습니다.")
+        );
     }
 
     @Transactional

@@ -7,6 +7,8 @@ public class BoardRequestDto {
     private String password;
     private String contents;
 
+
+    // 생성자 4개 속성
     public String getTitle() {
         return title;
     }

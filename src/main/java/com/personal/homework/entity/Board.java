@@ -1,8 +1,8 @@
 package com.personal.homework.entity;
 
 
+import com.personal.homework.dto.BoardDeleteDto;
 import com.personal.homework.dto.BoardRequestDto;
-import com.personal.homework.dto.BoardResponseDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -12,6 +12,7 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 public class Board extends Timestamped {
+    // 기본키 매핑
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -36,6 +37,7 @@ public class Board extends Timestamped {
         this.password = requestDto.getPassword();
         this.contents = requestDto.getContents();
     }
+
 
     //Setter
     public void update(BoardRequestDto requestDto) {

@@ -13,6 +13,7 @@ public class BoardResponseDto {
     private LocalDateTime createdAt;
 
 
+    // 생성자
     public BoardResponseDto(Board board) {
     this.id = board.getId();
     this.title = board.getTitle();
