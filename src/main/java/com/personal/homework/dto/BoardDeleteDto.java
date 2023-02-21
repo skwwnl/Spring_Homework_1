@@ -1,15 +1,15 @@
 package com.personal.homework.dto;
 
 
+import com.personal.homework.entity.Board;
+
 public class BoardDeleteDto {
-    private String success;
-    private String password;
-    public BoardDeleteDto(){
-        this.success = "삭제하였습니다";
+    private boolean success;
+    public BoardDeleteDto(Board board){
+        this.success = true;
     }
 
-    public String getPassword(){ return password;}
-    public String getSuccess(){
+    public boolean getSuccess(){
         return success;
     }
 }
